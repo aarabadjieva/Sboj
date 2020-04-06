@@ -1,0 +1,19 @@
+.bg-sboj {
+	background-color: #606060;
+}
+
+.w-15 {
+	width: 15%;
+}
+
+textarea {
+	resize: none;
+}
+
+li {
+	white-space: nowrap;
+}
+
+label {
+	white-space:nowrap
+}

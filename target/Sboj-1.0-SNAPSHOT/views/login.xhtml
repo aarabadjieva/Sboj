@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:include src="templates/head.xhtml"/>
+<h:body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-sboj">
+                <h:link class="navbar-brand text-info h4" value="Sboj.gb" outcome="index"/>
+                <h:commandButton class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"/>
+                </h:commandButton>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav row">
+                        <li class="nav-item col-md-4">
+                            <h:link class="nav-link text-info active h5" value="Home" outcome="home"/>
+                        </li>
+                        <li class="nav-item col-md-4">
+                            <h:link class="nav-link text-info active h5" value="Login" outcome="login"/>
+                        </li>
+                        <li class="nav-item col-md-4">
+                            <h:link class="nav-link text-info active h5" value="Register" outcome="register"/>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <hr class="my-3"/>
+            <h1 class="text-center">Login</h1>
+            <hr class="hr-3"/>
+            <h:form class="mx-auto w-15" method="post" action="login">
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel value="Username" class="h3 mb-2"/>
+                    </div>
+                    <h:inputText class="form-control" id="username" value="#{loginBean.user.username}"/>
+                </div>
+                <div class="form-group">
+                    <div class="label-holder d-flex justify-content-center">
+                        <h:outputLabel value="Password" class="h3 mb-2"/>
+                    </div>
+                    <h:inputSecret class="form-control" id="password" value="#{loginBean.user.password}"/>
+                </div>
+                <div class="button-holder d-flex justify-content-center">
+                    <h:commandButton type="submit" class="btn btn-info text-white" value="Login" action="#{loginBean.loginUser}"/>
+                </div>
+            </h:form>
+            <hr class="my-3"/>
+        </main>
+        <footer class="footer py-3">
+            <div class="container-fluid">
+                <div class="text-muted container-fluid text-center"> &#169; CopyRight Sanity Web Design Studios 2019. All
+                    rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+</h:body>
+</html>
+
